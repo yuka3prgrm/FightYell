@@ -9,7 +9,7 @@
 | last_name           | string | null: false               |
 
 ### Association
-- has_many :posts
+- has_many :fights
 
 
 ## fight テーブル
@@ -17,7 +17,7 @@
 | Column         | Type        | Options                        |
 | -------------- | ----------- | -------------------------------|
 | title          | string      | null: false                    |
-| unit           | text        | null: false                    |
+| unit_id        | integer     | null: false                    |
 | gool           | integer     | null: false                    |
 | user           | references  | null: false, foreign_key: true |
 
@@ -31,11 +31,11 @@
 | Column         | Type        | Options                        |
 | -------------- | ----------- | -------------------------------|
 | content        | string      | null: false                    |
-| image          | text        | null: false                    |
 | fight          | references  | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :fight
+- has_one_attached :image
 
 ## progress テーブル
 
