@@ -1,5 +1,6 @@
 class Fight < ApplicationRecord
   belongs_to :user
+  has_one :yell
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :unit

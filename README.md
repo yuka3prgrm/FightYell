@@ -23,13 +23,14 @@
 
 ### Association
 - belongs_to :user
-- has_one :message
+- has_one :yell
 - has_one :progress
 
-## message テーブル
+## yell テーブル
 
 | Column         | Type        | Options                        |
 | -------------- | ----------- | -------------------------------|
+| friend         | string      | null: false                    |
 | content        | string      | null: false                    |
 | fight          | references  | null: false, foreign_key: true |
 
