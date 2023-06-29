@@ -1,0 +1,19 @@
+<%= form_with model: @fight, url: fights_path , local: true do |f|%> 
+  <div class="field">
+    <%= f.label :title, "何を" %><br />
+    <%= f.text_field :title, id:"fight-title"%>
+  </div>
+
+  <div class="field">
+    <%= f.label :gool, "どれだけ" %><br />
+    <%= f.text_area :gool, class: :form__text, id:"fight-gool" %>
+  </div>
+
+  <div class="field">
+    <%= f.collection_select(:unit_id, Unit.all, :id, :name, {}, {class:"select-box", id:"fight-unit"}) %><br />
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
