@@ -21,6 +21,6 @@ class FightsController < ApplicationController
   private
 
   def fight_params
-    params.require(:fight).permit(:title,:gool,:unit_id).merge(user_id: current_user.id)
+    params.require(:fight).permit(:title,:goal,:unit_id).merge(user_id: current_user.id)
   end
 end

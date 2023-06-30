@@ -1,10 +1,8 @@
 <% @fights.each do |fight| %>
   <%= fight.title %>
-  <%= fight.gool %>
+  <%= fight.goal %>
   <%= fight.unit.name %>頑張ります
 
 <%= link_to "お友達に決意表明する", fight_yells_path(fight) %>
-
-
 
 <% end %>

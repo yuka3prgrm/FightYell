@@ -42,7 +42,7 @@
 
 | Column         | Type        | Options                        |
 | -------------- | ----------- | -------------------------------|
-| conduct        | string      | null: false                    |
+| study          | integer     | null: false                    |
 | fight          | references  | null: false, foreign_key: true |
 
 ### Association

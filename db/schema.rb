@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_29_110211) do
+ActiveRecord::Schema.define(version: 2023_06_30_080544) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -36,11 +36,19 @@ ActiveRecord::Schema.define(version: 2023_06_29_110211) do
   create_table "fights", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
     t.integer "unit_id", null: false
-    t.integer "gool", null: false
+    t.integer "goal", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_fights_on_user_id"
+  end
+
+  create_table "progresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "study", null: false
+    t.bigint "fight_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["fight_id"], name: "index_progresses_on_fight_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -69,5 +77,6 @@ ActiveRecord::Schema.define(version: 2023_06_29_110211) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "fights", "users"
+  add_foreign_key "progresses", "fights"
   add_foreign_key "yells", "fights"
 end
