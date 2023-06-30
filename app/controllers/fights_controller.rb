@@ -16,6 +16,8 @@ class FightsController < ApplicationController
     end
   end
 
+  
+
   private
 
   def fight_params

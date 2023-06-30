@@ -18,7 +18,7 @@
 | -------------- | ----------- | -------------------------------|
 | title          | string      | null: false                    |
 | unit_id        | integer     | null: false                    |
-| gool           | integer     | null: false                    |
+| goal           | integer     | null: false                    |
 | user           | references  | null: false, foreign_key: true |
 
 ### Association

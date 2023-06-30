@@ -1,5 +1,5 @@
-<%= form_with model: @yell, url:fight_yells_path, local: true do |f| %>
-  <%= render 'shared/error_messages', model: f.object %>
+<%= form_with model: @yell, url:fight_yells_path do |f| %>
+
 
   <%= f.file_field :image, id:"item-image" %>
   <%= f.text_area :friend, class: :form__text, id:"fight-gool" %>

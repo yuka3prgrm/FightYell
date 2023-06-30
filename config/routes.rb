@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: "fights#index"
 
   resources :fights, only: [:index, :new, :create] do
-    resources :yells, only:[:new, :create] 
+    resources :yells,only: [:index, :new, :create]
   end
 end

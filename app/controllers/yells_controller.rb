@@ -1,5 +1,11 @@
 class YellsController < ApplicationController
+  
+  def index
+    @fight = Fight.find(params[:fight_id])
+  end
+
   def new
+    @fight = Fight.find(params[:fight_id])
     @yell = Yell.new
   end
 
