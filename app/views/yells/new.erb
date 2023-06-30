@@ -1,0 +1,8 @@
+<%= form_with model: @yell, url:fight_yells_path, local: true do |f| %>
+  <%= render 'shared/error_messages', model: f.object %>
+
+  <%= f.file_field :image, id:"item-image" %>
+  <%= f.text_area :friend, class: :form__text, id:"fight-gool" %>
+  <%= f.text_area :content, class: :form__text, id:"fight-gool" %>
+  <%= f.submit "送信" %>
+<% end %>
