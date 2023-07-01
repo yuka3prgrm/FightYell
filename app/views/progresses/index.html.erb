@@ -42,3 +42,9 @@
     <%= f.submit '頑張った！', class: 'form-submit', id: "submit"%>
   </div>
 <% end %>
+
+
+<% if @fight.goal <= total%>
+<div class="background" id="background"></div>
+<%= image_tag'kusudama.gif' , class:"gif" ,id:"gif"%>
+<% end %>
