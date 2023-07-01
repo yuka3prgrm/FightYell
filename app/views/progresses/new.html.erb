@@ -1,0 +1,4 @@
+<%= form_with model: @progress, url:fight_yells_path do |f| %>
+<%= f.text_area :study, class: :form__text, id:"progress-study" %>
+<%= f.submit "送信" %>
+<% end %>

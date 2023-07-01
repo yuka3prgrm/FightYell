@@ -1,0 +1,44 @@
+
+<% total = @progresses.sum(&:study) %>
+<% if @fight.goal > total%>
+目標は<%= @fight.title %><%= @fight.goal %><%= @fight.unit.name %>
+ する！！
+
+  お友達からのメッセージ
+  目標が達成したら見えるようになるよ！！
+  <div class="picture">
+    <%= image_tag'flame.png', class:"flame-pict" %>
+    <%= image_tag'hatena.png', class:"hatena-pict" %>
+  </div>
+<% end %>
+
+<% if @fight.goal <= total%>
+目標の<%= @fight.title %><%= @fight.goal %><%= @fight.unit.name %>を達成したよ！
+  <div class="picture">
+    <%= image_tag'flame.png' , class:"flame-pict" %>
+    <%= image_tag @yell.image, class:"hatena-pict" %>
+  </div>
+  <%= @yell.friend %><%= @yell.content %>
+<% end %>
+
+<% @progresses.each do |progress| %>
+  <div class="posts">
+    <div class="post-study">
+      <% progress.study %>
+    </div>
+  </div>
+<% end %>
+現在
+
+<div class="total-study">
+  合計: <%= total %> ／<%= @fight.goal %><%= @fight.unit.name %>
+</div>
+
+
+記録する
+  <%= form_with model: [@fight,@progress], class: 'form', id: "form", local: true do |f| %>
+  <div class="form-input">
+    <%= f.text_field :study, class: 'form-study', placeholder: '数字を入力してください', id: "study" %><%= @fight.unit.name %>
+    <%= f.submit '頑張った！', class: 'form-submit', id: "submit"%>
+  </div>
+<% end %>

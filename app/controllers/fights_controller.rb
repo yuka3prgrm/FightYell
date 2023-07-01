@@ -1,6 +1,7 @@
 class FightsController < ApplicationController
+  before_action :authenticate_user!
   def index
-    @fights = Fight.all
+    @fights = current_user.fights
   end
 
   def new

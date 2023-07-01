@@ -24,7 +24,7 @@
 ### Association
 - belongs_to :user
 - has_one :yell
-- has_one :progress
+- has_many :progress
 
 ## yell テーブル
 

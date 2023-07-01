@@ -1,8 +1,10 @@
+<%= "#{current_user.nickname}さんが#{@fight.title}#{@fight.goal}#{@fight.unit.name}頑張るみたい！応援してあげてね！"%>
+<div>  
 <%= form_with model: @yell, url:fight_yells_path do |f| %>
-
 
   <%= f.file_field :image, id:"item-image" %>
   <%= f.text_area :friend, class: :form__text, id:"fight-goal" %>
   <%= f.text_area :content, class: :form__text, id:"fight-goal" %>
   <%= f.submit "送信" %>
 <% end %>
+</div>

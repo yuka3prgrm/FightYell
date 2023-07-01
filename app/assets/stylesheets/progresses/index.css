@@ -1,0 +1,21 @@
+.picture{
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+.flame-pict{
+  position: absolute;
+  z-index: 4;
+  width: 500px;
+  height: 500px;
+}
+
+.hatena-pict{
+  position: absolute;
+  z-index: 3;
+  width: 450px;
+  height: 450px;
+  left: 25px;
+  top: 25px;
+}

@@ -1,7 +1,7 @@
 class Fight < ApplicationRecord
   belongs_to :user
   has_one :yell
-  has_one :progress
+  has_many :progresses
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :unit
