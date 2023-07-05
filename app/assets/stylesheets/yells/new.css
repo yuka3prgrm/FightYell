@@ -1,0 +1,52 @@
+.yell-new{
+  height: calc(100vh - 200px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.yell-items{
+  width: 700px;
+  background-color: #F2F2F3;
+}
+
+.yell-fight{
+  font-size: 18px;
+  font-weight: 600;
+  margin: 50px 40px;
+}
+
+.yell-form-items{
+  display: block;
+}
+
+.form-image{
+  height: 50px;
+  margin: 50px 40px;
+}
+
+.form-text1{
+  height: 30px;
+  width: 620px;
+  margin: 0 40px 20px;
+}
+.form-text1 input{
+  width: 100%;
+  height: 100%;
+}
+
+.form-text2{
+  height: 100px;
+  width: 620px;
+  margin: 0 40px 20px;
+  
+}
+
+.form-text2 textarea{
+  width: 100%;
+  height: 100%;
+}
+
+.yell-submit{
+  margin: 0 40px 20px;
+}

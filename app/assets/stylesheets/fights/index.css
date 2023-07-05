@@ -1,0 +1,39 @@
+.fights-index{
+  display: flex;
+}
+
+.fights{
+  margin-left: 20px;
+  background-color: aliceblue;
+  height: 350px;
+  width: 200px;
+}
+
+.new-pict{
+  height: 80px;
+  width: 80px;
+  margin: 60px;
+}
+
+.new-item{
+  color: black;
+  text-decoration: none;
+  text-align: center;
+}
+
+.fight-title{
+  margin: 60px 0;
+  text-align: center;
+}
+
+.fight_item{
+  color: black;
+  text-decoration: none;
+  text-align: center;
+}
+
+.cleared-pict{
+  height: 50px;
+  width: 160px;
+  margin: 50px 20px;
+}

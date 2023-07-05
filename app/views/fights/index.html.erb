@@ -1,8 +1,28 @@
-<% @fights.each do |fight| %>
-  <%= fight.title %>
-  <%= fight.goal %>
-  <%= fight.unit.name %>頑張ります
+<div class="fights-index">
+<div class="fights" onclick="location.href='<%= new_fight_path %>';">
+  <div class="new-picts">
+    <%= image_tag'new.png', class:"new-pict"%>
+  </div>
+  <div class="new-item">新規目標設定</div>
+</div>
 
-<%= link_to "お友達に決意表明する", fight_yells_path(fight) %>
-<%= link_to "詳しく", fight_progresses_path(fight) %>
+<% @fights.each do |fight| %>
+<div class="fights">
+  <div class="fight-title"><%= fight.title %></div>
+  <% if fight.yell.presence %>
+    <div class="fight_item">
+      <%= link_to "成果を見る👀", fight_progresses_path(fight), class:"fight_item"%>
+    </div>
+  <% else %>
+    <div class="fight_item">
+      お友達に決意表明する🔥
+      <%= link_to "LINEでお友達に送る","http://line.me/R/msg/text/?#{fight.user.nickname}さんが#{fight.title}#{fight.goal}#{fight.unit.name}頑張るみたい！応援してあげてね！#{new_fight_yell_url(fight)}" %>
+    </div>
+  <% end %>
+  <% total = fight.progresses.sum(&:study) %>
+  <% if fight.goal <= total %>
+    <%= image_tag'cleared.png', class:"cleared-pict"%>
+  <% end %>
+</div>
 <% end %>
+</div>

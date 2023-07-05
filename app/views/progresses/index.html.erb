@@ -1,5 +1,5 @@
+<% total = @fight.progresses.sum(&:study) %>
 
-<% total = @progresses.sum(&:study) %>
 <% if @fight.goal > total%>
 目標は<%= @fight.title %><%= @fight.goal %><%= @fight.unit.name %>
  する！！
@@ -13,7 +13,9 @@
 <% end %>
 
 <% if @fight.goal <= total%>
+<div class="goal">
 目標の<%= @fight.title %><%= @fight.goal %><%= @fight.unit.name %>を達成したよ！
+</div>
   <div class="picture">
     <%= image_tag'flame.png' , class:"flame-pict" %>
     <%= image_tag @yell.image, class:"hatena-pict" %>

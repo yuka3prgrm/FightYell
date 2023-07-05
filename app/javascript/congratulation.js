@@ -1,10 +1,11 @@
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
   const background = document.getElementById('background');
   const gif = document.getElementById('gif');
 
   document.addEventListener('click', () => {
-    background.style.display = 'none';
-    gif.style.display = 'none';
-    gif.style.animationName = 'none';
+    if (background && gif) {
+      background.style.display = 'none';
+      gif.style.display = 'none';
+    }
   });
 });

@@ -1,10 +1,24 @@
-<%= "#{current_user.nickname}さんが#{@fight.title}#{@fight.goal}#{@fight.unit.name}頑張るみたい！応援してあげてね！"%>
-<div>  
-<%= form_with model: @yell, url:fight_yells_path do |f| %>
-
-  <%= f.file_field :image, id:"item-image" %>
-  <%= f.text_area :friend, class: :form__text, id:"fight-goal" %>
-  <%= f.text_area :content, class: :form__text, id:"fight-goal" %>
-  <%= f.submit "送信" %>
-<% end %>
+<div class="yell-new">
+  <div class="yell-items">
+    <div class="yell-fight">
+      <%= "#{@fight.user.nickname}さんが#{@fight.title}#{@fight.goal}#{@fight.unit.name}頑張るみたい！"%><br>
+      目標達成したら見れる画像とメッセージを送ろう！
+    </div>
+    <div class="yell-form-items">
+      <%= form_with model: @yell, url:fight_yells_path do |f| %>
+      <div class="form-image">
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+      <div class="form-text1">
+        <%= f.text_field :friend, id:"fight-goal", placeholder:"あなたのお名前" %><br>
+      </div>
+      <div class="form-text2">
+        <%= f.text_area :content, id:"fight-goal", placeholder:"メッセージ" %>
+      </div>
+      <div class="yell-submit">
+        <%= f.submit "送信" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
 </div>
