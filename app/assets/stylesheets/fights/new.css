@@ -1,0 +1,47 @@
+.fight-new{
+  height: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.fight-items{
+  width: 700px;
+  background-color:  aliceblue;
+}
+
+.goal-coment{
+  font-size: 18px;
+  font-weight: 600;
+  margin: 50px 40px;
+}
+
+.field{
+  font-size: 18px;
+  font-weight: 600;
+  margin: 50px 40px;
+}
+
+.field-goal{
+  font-size: 18px;
+  font-weight: 600;
+  margin: 50px 40px;
+}
+
+.field-goal input{
+  font-size: 18px;
+  font-weight: 600;
+  width: 250px;
+  margin-right: 50px;
+}
+
+.actions{
+  margin: 0 40px 20px;
+}
+
+.actions input{
+  background-color: #ffffff;
+  padding: 2px;
+  border: solid black 1px;
+}
