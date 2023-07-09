@@ -1,5 +1,0 @@
-<% if @fight %>
-<%= link_to "LINEでお友達に送る","http://line.me/R/msg/text/?#{current_user.nickname}さんが#{@fight.title}#{@fight.goal}#{@fight.unit.name}頑張るみたい！応援してあげてね！#{new_fight_yell_url(@fight)}" %>
-<% end %>
-
-

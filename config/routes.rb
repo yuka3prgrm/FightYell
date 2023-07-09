@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   resources :fights, only: [:index, :new, :create] do
     resources :yells,only: [:index, :new, :create]
-    resources :progresses,only: [:index, :create]
+      resources :progresses,only: [:index, :create]
   end
 end

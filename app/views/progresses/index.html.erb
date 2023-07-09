@@ -18,9 +18,9 @@
 </div>
   <div class="picture">
     <%= image_tag'flame.png' , class:"flame-pict" %>
-    <%= image_tag @yell.image, class:"hatena-pict" %>
+    <%= image_tag @fight.yell.image, class:"hatena-pict" %>
   </div>
-  <%= @yell.friend %><%= @yell.content %>
+  <%= @fight.yell.friend %><%= @fight.yell.content %>
 <% end %>
 
 <% @progresses.each do |progress| %>

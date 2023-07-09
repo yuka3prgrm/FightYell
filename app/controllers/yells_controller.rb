@@ -1,20 +1,21 @@
 class YellsController < ApplicationController
   
-  def index
-    @fight = Fight.find(params[:fight_id])
-  end
-
   def new
     @fight = Fight.find(params[:fight_id])
     @yell = Yell.new
   end
 
   def create
-    @yell = Yell.new(yell_params)
-    if @yell.save
+    @fight = Fight.find(params[:fight_id])
+    if @fight.yell.present?
       redirect_to root_path
     else
-      render :new
+      @yell = @fight.build_yell(yell_params)
+      if @yell.save
+        redirect_to action: :index
+      else
+        render :new
+      end
     end
   end
 

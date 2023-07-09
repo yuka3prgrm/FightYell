@@ -1,13 +1,14 @@
 .yell-new{
-  height: calc(100vh - 200px);
+  height: 600px;
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .yell-items{
   width: 700px;
-  background-color: #F2F2F3;
+  background-color:  aliceblue;
 }
 
 .yell-fight{
@@ -49,4 +50,14 @@
 
 .yell-submit{
   margin: 0 40px 20px;
+}
+
+
+.hidden{
+  display: none;
+  background-color: aliceblue;
+  position: absolute;
+  height: 100%;
+  width: 700px;
+  z-index: 6;
 }

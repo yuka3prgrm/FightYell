@@ -4,7 +4,6 @@ class ProgressesController < ApplicationController
     @progresses =Progress.all
     @progress = Progress.new
     @fight = Fight.find(params[:fight_id])
-    @yell = Yell.find(params[:fight_id])
   end
 
   def create

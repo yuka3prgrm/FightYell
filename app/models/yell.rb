@@ -5,6 +5,6 @@ class Yell < ApplicationRecord
   with_options presence: true do
     validates :friend
     validates :content
-    validates :image
+    validates :image  
   end
 end
