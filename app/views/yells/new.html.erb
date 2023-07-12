@@ -1,13 +1,12 @@
 <div class="yell-new">
   <div class="yell-items">
     
-    <%= render "shared/invitation"%>
     <div class="yell-fight">
       <%= "#{@fight.user.nickname}さんが#{@fight.title}#{@fight.goal}#{@fight.unit.name}頑張るみたい！"%><br>
       目標達成したら見れる画像とメッセージを送ろう！
     </div>
     <div class="yell-form-items">
-      <%= form_with model: @yell, url:fight_yells_path do |f| %>
+      <%= form_with model: @yell, url:fight_yells_path(@fight), local: true do |f| %>
       <%= render 'shared/error_messages', model: f.object %>
       <div class="form-image">
         <%= f.file_field :image, id:"item-image" %>
@@ -16,7 +15,7 @@
         <%= f.text_field :friend, id:"fight-goal", placeholder:"あなたのお名前" %><br>
       </div>
       <div class="form-text2">
-        <%= f.text_area :content, id:"fight-goal", placeholder:"メッセージ" %>
+        <%= f.text_area :content, id:"fight-goal2", placeholder:"メッセージ" %>
       </div>
       <div class="yell-submit">
         <%= f.submit "送信" %>

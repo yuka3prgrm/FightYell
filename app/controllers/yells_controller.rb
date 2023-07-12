@@ -7,16 +7,16 @@ class YellsController < ApplicationController
 
   def create
     @fight = Fight.find(params[:fight_id])
-    if @fight.yell.present?
-      redirect_to root_path
-    else
-      @yell = @fight.build_yell(yell_params)
+    @yell = @fight.build_yell(yell_params)
       if @yell.save
-        redirect_to action: :index
+        redirect_to invitation_path
       else
         render :new
       end
-    end
+  end
+
+  def invitation
+    # 必要な処理を記述
   end
 
   private

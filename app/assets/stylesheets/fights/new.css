@@ -36,11 +36,11 @@
   margin-right: 50px;
 }
 
-.actions{
+.fight-submit{
   margin: 0 40px 20px;
 }
 
-.actions input{
+.fight-submit input{
   background-color: #ffffff;
   padding: 2px;
   border: solid black 1px;

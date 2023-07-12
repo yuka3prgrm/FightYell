@@ -6,4 +6,7 @@ Rails.application.routes.draw do
     resources :yells,only: [:index, :new, :create]
       resources :progresses,only: [:index, :create]
   end
+
+  
+  get '/invitation', to: 'yells#invitation', as: 'invitation'
 end
