@@ -1,0 +1,37 @@
+.login-items{
+  width: 700px;
+  background-color:  aliceblue;
+  
+}
+
+.new-user{
+  font-size: 24px;
+  margin: 40px 40px;
+}
+
+
+.new-field{
+  margin: 10px 40px;
+}
+
+.new-field input{
+  width: 350px;
+}
+
+.user-actions input{
+  width: 100px;
+}
+
+.new-field textarea{
+  height: 28px;
+}
+.remember{
+  margin: 10px 40px;
+}
+
+.login-actions{
+  margin-left: 40px;
+}
+.sign-render{
+  margin-left: 40px;
+}
